@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 255, 255, 255;
+  --background-start-rgb: 0, 0, 0;
+  --background-end-rgb: 0, 0, 0;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(to bottom, transparent, rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
+  font-family: var(--font-orbitron), system-ui, sans-serif;
+}
+
+/* Estilos específicos para elementos de interface futurista */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+button {
+  font-family: var(--font-orbitron), system-ui, sans-serif;
+  letter-spacing: 0.02em;
+}
+
+/* Estilo para números e valores */
+.font-mono,
+.tabular-nums {
+  font-family: var(--font-orbitron), monospace;
+}
