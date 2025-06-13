@@ -2429,7 +2429,17 @@ export default function CriptoEasyIA() {
     )
   }
 
+  
   if (currentScreen === "post-demo") {
+    const totalInvested = trades.reduce((sum, trade) => sum + trade.amount, 0)
+    const totalProfit = trades.reduce((sum, trade) => sum + (trade.profitLoss || 0), 0)
+    const winningTrades = trades.filter((trade) => trade.success).length
+    const totalTrades = trades.length
+    const accuracy = totalTrades > 0 ? Math.round((winningTrades / totalTrades) * 100) : 0
+
+    return (
+      <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-black text-white relative overflow-hidden">
+
     // Calculate demo results
     const totalInvested = trades.reduce((sum, trade) => sum + trade.amount, 0)
     const totalProfit = trades.reduce((sum, trade) => sum + (trade.profitLoss || 0), 0)
@@ -2992,7 +3002,17 @@ export default function CriptoEasyIA() {
     )
   }
 
+  
   if (currentScreen === "post-demo") {
+    const totalInvested = trades.reduce((sum, trade) => sum + trade.amount, 0)
+    const totalProfit = trades.reduce((sum, trade) => sum + (trade.profitLoss || 0), 0)
+    const winningTrades = trades.filter((trade) => trade.success).length
+    const totalTrades = trades.length
+    const accuracy = totalTrades > 0 ? Math.round((winningTrades / totalTrades) * 100) : 0
+
+    return (
+      <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-black text-white relative overflow-hidden">
+
     // Calculate demo results
     const totalInvested = trades.reduce((sum, trade) => sum + trade.amount, 0)
     const totalProfit = trades.reduce((sum, trade) => sum + (trade.profitLoss || 0), 0)
